@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block carousel %} {% endblock %}
+
+{% block content%}
+
+    <!-- Three columns of text below the carousel -->
+    <br/><br/>
+    <h2>Nos meilleures ventes</h2>
+    <p>Découvrez les articles les plus vendus</p>
+    <div class="row">
+        {%  for product in products %}
+            <div class="col-md-3">
+                {% include 'product/single_product.html.twig' %}
+            </div>
+        {% endfor %}
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h3 class="featurette-heading">Ustensiles de cuisine <br><span class="text-muted">de qualité professionnelle</span></h3>
+            <p class="lead">Bienvenue dans la cuisine de Magiciens du Fouet ! Ici, vous trouverez des ustensiles de cuisine et de pâtisserie pour réaliser toutes vos envies culinaires. Meilleur du Chef répond à un besoin des passionnés de cuisine en constante évolution. Nous avons à cœur d'apporter notre expertise et celles des marques françaises que nous distribuons aux professionnels du secteur de la gastronomie et aux particuliers. C'est pourquoi, nous mettons à votre disposition, des accessoires de cuisine et de pâtisserie, ainsi que des ingrédients d'épicerie.</p>
+        </div>
+        <div class="col-md-5">
+            <img src="{{ asset('assets/img/cuis.jpg') }}" class="img-fluid" alt="Un plat de poisson delicieux">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h3 class="featurette-heading">Réalisez les recettes<br><span class="text-muted">les plus gourmandes</span></h3>
+            <p class="lead">Nous vous proposons de larges gammes de produits. En pâtisserie, vous trouverez divers moules à gâteau, moule à bûche, moule à muffin, moule à cake, etc. Beaucoup de choix de couteaux de cuisine, couteau en céramique, aiguiseur, des couteaux reconnus par les cuisiniers pour leur qualité de découpe. Enfin, du matériel de cuisson pour constituer votre batterie de cuisine (casserole, poêle, faitout, etc.).</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img src="{{ asset('assets/img/dessert.jpg') }}" class="img-fluid" alt="Meilleur chef de France">
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h3 class="featurette-heading">Nous cherchons <br><span class="text-muted">les meilleurs produits</span></h3>
+            <p class="lead">Ustensile de cuisine, pâtisserie et épiceries pour parfaire vos préparations et offrir le meilleur goût à vos recettes. Vous cherchez des articles de cuisine traditionnels, planche à découper, passoire et maryse ou des accessoires plus précis comme un thermomètre de cuisine, moule à manqué ou un rhodoïd. </p>
+        </div>
+        <div class="col-md-5">
+            <img src="{{ asset('assets/img/cuis2.jpg') }}" class="img-fluid" alt="Un plat de poisson delicieux">
+        </div>
+    </div>
+
+    <!-- /END THE FEATURETTES -->
+
+{% endblock %}

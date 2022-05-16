@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter - Les Magiciens du Fouet{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Nous contacter</h2>
+            <h5>Toujours à l’écoute et à la recherche de nouveaux produits de qualité, <br/>nous sommes ouvertes à vos suggestions.</h5><br/>
+            {% for message in app.flashes('notice') %}
+                <div class="alert alert-info">{{ message }}</div>
+            {% endfor %}
+            {{ form(form) }}</div>
+        <div class="col-md-4">
+            <strong>Les Magiciens du Fouet</strong>
+            <hr>
+            06 20 30 40 50<br/>
+            8 rue des Lylas, 45100 Fleury-Les-Aubrais<br/>
+            contact@lesmagiciensdufouet.fr
+        </div>
+    </div>
+
+{% endblock %}

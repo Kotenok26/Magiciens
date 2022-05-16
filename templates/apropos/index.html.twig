@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Qui sommes-nous{% endblock %}
+
+{% block content %}
+<div class="row featurette">
+        <div class="col-md-7">
+            <h3 class="featurette-heading">Un savoir faire Français, <br><span class="text-muted">une équipe de passionnée</span></h3>
+            <p class="lead">Entreprise au service de ses clients, garde à cœur leur satisfaction en misant sur l'efficacité : livrer la France entière moins de 24 heures après une commande en ligne reste un objectif prioritaire. Fort de son succès, ces dernières années le pure-player a ainsi investi dans un nouvel entrepôt lui permettant de stocker près de 10 000 produits.</p>
+        </div>
+        <div class="col-md-5">
+            <img src="{{ asset('assets/img/chef.jpg') }}" class="img-fluid" alt="Un plat de poisson delicieux">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h3 class="featurette-heading">Nos <br><span class="text-muted">engagements</span></h3>
+            <p class="lead">Toute notre équipe est à votre écoute. C'est pourquoi nous vous garantissons une qualité d'accueil irréprochable. Nous prenons soin de prendre en compte tous vos besoins et de vous apporter le meilleur conseil, une information claire et juste sur nos produits, sur nos modes de paiement et de livraison.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img src="{{ asset('assets/img/food.jpg') }}" class="img-fluid" alt="Meilleur chef de France">
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+{% endblock %}
