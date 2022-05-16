@@ -62,7 +62,7 @@
 
 {% block script %}
     <script type="text/javascript">
-        var stripe = Stripe("pk_test_51IvTCcHGfERyXn6hubiP0bdEPDngezMmJTS1ZytPzhuouJWYLNcbinZ6ouwn3DKWT6hUEb7M4KAdEo46szWhqe3n00i1ncHq7G");
+        var stripe = Stripe("{{ apikeypublic }}");
         var checkoutButton = document.getElementById("checkout-button");
         checkoutButton.addEventListener("click", function () {
             fetch("/commande/create-session/{{ reference }}", {
